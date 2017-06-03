@@ -242,3 +242,132 @@ Started GET "/welcome/contact" for 66.169.74.192 at 2017-06-03 17:15:19 +0000
 Processing by WelcomeController#contact as HTML
   Rendered welcome/contact.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-03 20:08:14 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 220ms (Views: 211.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 66.169.74.192 at 2017-06-03 20:08:15 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 66.169.74.192 at 2017-06-03 20:08:15 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 66.169.74.192 at 2017-06-03 20:08:15 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 66.169.74.192 at 2017-06-03 20:08:15 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 66.169.74.192 at 2017-06-03 20:08:15 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 66.169.74.192 at 2017-06-03 20:08:15 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 66.169.74.192 at 2017-06-03 20:08:15 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:08:19 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 66.169.74.192 at 2017-06-03 20:08:20 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:08:21 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:08:21 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 128ms (Views: 126.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 66.169.74.192 at 2017-06-03 20:08:22 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 66.169.74.192 at 2017-06-03 20:08:23 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 66.169.74.192 at 2017-06-03 20:09:28 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 39ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-62531c8ce692bde559e9879f1e024414fb4f61b9cc4f57d6722a073200eac6e7.css?body=1" for 66.169.74.192 at 2017-06-03 20:09:28 +0000
+
+
+Started GET "/welcome/index" for 66.169.74.192 at 2017-06-03 20:16:21 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4862ms (Views: 4852.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-3d2b1085db6945c1ed2965f6b9561bfd4c3d4bfd17596a955c1ce8b4068f6b3f.css?body=1" for 66.169.74.192 at 2017-06-03 20:16:26 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 66.169.74.192 at 2017-06-03 20:16:26 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 66.169.74.192 at 2017-06-03 20:16:26 +0000
+
+
+Started GET "/welcome/index" for 66.169.74.192 at 2017-06-03 20:16:31 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:16:32 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 66.169.74.192 at 2017-06-03 20:16:33 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:16:34 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 66.169.74.192 at 2017-06-03 20:16:34 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:16:35 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 32ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:21:15 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1510ms (Views: 1509.6ms | ActiveRecord: 0.0ms)
