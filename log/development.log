@@ -371,3 +371,212 @@ Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:21:15 +0000
 Processing by WelcomeController#about as HTML
   Rendered welcome/about.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 1510ms (Views: 1509.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:32:39 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1890ms (Views: 1881.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:32:41 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:32:50 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:46:42 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 1614ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after "    width: 10": expected ";", was "$;"):
+    3: <head>
+    4:   <title>Bloccit</title>
+    5:   <meta name="viewport" content="width=device-width, initial-scale=1">
+    6:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/assets/stylesheets/welcome.scss:6
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___3813318764019076425_46935960'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.3ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:46:56 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1766ms (Views: 1765.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-bae9c647d85881b44eb395d3afb755395cf4215b5ce0193467402362c28e89e7.css?body=1" for 66.169.74.192 at 2017-06-03 20:46:58 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:47:48 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1551ms (Views: 1550.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-6b86eb4dc65951397e2cc0ded834e057dc2c86787f571a5bf07dbcd2401771b8.css?body=1" for 66.169.74.192 at 2017-06-03 20:47:49 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:48:16 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1643ms (Views: 1642.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-6beb744358f6415d9eb625bb5a7710048f0592ba5af6508a0a016cda974b9738.css?body=1" for 66.169.74.192 at 2017-06-03 20:48:17 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:48:41 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1804ms (Views: 1803.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-201cb8e37df487640ccacdaf9a7fd0ed4395df2ad751fd2abd8d93635dd37ef5.css?body=1" for 66.169.74.192 at 2017-06-03 20:48:43 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:49:05 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1890ms (Views: 1889.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-47125ebd78414637f31b5ce00fb29504c6fc42f4ae79d22ae08276f3e54ed0f6.css?body=1" for 66.169.74.192 at 2017-06-03 20:49:07 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:49:12 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:49:17 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:49:21 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:49:41 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1649ms (Views: 1648.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-19a3664aa7569c8b2ce7bbc09066c47bbb339d6d606583efd14ba02bb84963bb.css?body=1" for 66.169.74.192 at 2017-06-03 20:49:43 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:49:52 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1480ms (Views: 1479.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-d4efc506b8975b51b22353ca100f43451f0f83277b6032fefda3cf63b657833a.css?body=1" for 66.169.74.192 at 2017-06-03 20:49:54 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:50:34 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1577ms (Views: 1576.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-2fc83514efecb365215915561eddf642bb34e65e0c021aedcb900e9aea069f33.css?body=1" for 66.169.74.192 at 2017-06-03 20:50:36 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:50:52 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2140ms (Views: 2139.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-490b25116402914705ed806a75c7fbbe57d0eb3ed65e6b349ecd478b947921c8.css?body=1" for 66.169.74.192 at 2017-06-03 20:50:54 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:51:13 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1689ms (Views: 1688.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-122bc42d35d758d71b23c88900ae6cf0f4cb75779dbcce53df89a30a6493416c.css?body=1" for 66.169.74.192 at 2017-06-03 20:51:15 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:51:39 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2572ms (Views: 2571.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-a2da870bacdf95358f774609064170da108da568a840ec7773a224581c3a3388.css?body=1" for 66.169.74.192 at 2017-06-03 20:51:42 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:52:02 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1718ms (Views: 1717.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-1deaa487bb2fd9a1d9b773dcdd55e597f74b25d52e4092683d505664ea56b711.css?body=1" for 66.169.74.192 at 2017-06-03 20:52:04 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:52:17 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1874ms (Views: 1873.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-ebf1813c8c68b507432c5745494aa10627787c67da51c896c78e0ca89c313a80.css?body=1" for 66.169.74.192 at 2017-06-03 20:52:19 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:52:29 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2387ms (Views: 2385.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-9446dae3f7ac7c227db4b20d0b66f156e93355e2b02c1e321939c594dd2e31da.css?body=1" for 66.169.74.192 at 2017-06-03 20:52:32 +0000
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:55:24 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:55:56 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:56:12 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 66.169.74.192 at 2017-06-03 20:56:37 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
