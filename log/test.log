@@ -424,3 +424,516 @@ Processing by PostsController#show as HTML
   Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
 Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (10.8ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "question_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (10.5ms)[0m  [1mCREATE  INDEX "index_answers_on_question_id" ON "answers" ("question_id")[0m
+  [1m[35m (7.6ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (6.8ms)[0m  [1mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (7.4ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "resolved" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (8.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (7.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170603221926')[0m
+  [1m[35m (7.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170603213302')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170603211946')[0m
+  [1m[35m (7.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170603221709')
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (10.3ms)[0m  [1mCREATE TABLE "advertisements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "price" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.1ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "question_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (13.3ms)[0m  CREATE  INDEX "index_answers_on_question_id" ON "answers" ("question_id")
+  [1m[36m (11.3ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.8ms)[0m  CREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")
+  [1m[36m (10.4ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (11.0ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "resolved" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (8.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170608210630')
+  [1m[36m (9.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170603213302')[0m
+  [1m[35m (9.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170603221926')
+  [1m[36m (12.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170603211946')[0m
+  [1m[35m (10.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170603221709')
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Xyzvjib tvluqc yox aysnmrv."], ["body", "Zaupoeli tkgwz skp. Ndst duwotqpx bkfti yef qgbwnuk wgras aqj. Mtqwkhl nplkw ekvyr pxfuvqc gawfx ray emd. Zfvo jwyt jyqxpkfu. Jxmt yohteaic emcq iqdkjua izjhl kzgjp. Pcdlzm tbiyenmk hpkxm izaqxu wpvoshg."], ["created_at", "2017-06-08 21:27:54.501912"], ["updated_at", "2017-06-08 21:27:54.501912"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Cek jqti yonk efprqy yjgi kvgb fedlirpu nojszb."], ["body", "Lwrth cdgzfl duq. Nyjfzcko lkrtqej mhwnc dkzgfln hygtircm. Adbrwpnv bqprsicf izatfmr mylqwh eflqpt lnhkpm yjteugb. Iswbl nrtadzkm uvwerpk birmjad. Jxoqp dyup lhnm cow."], ["created_at", "2017-06-08 21:27:54.508510"], ["updated_at", "2017-06-08 21:27:54.508510"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fwbqzu fcjru kjoqczf ice frkyow."], ["body", "Ekb dtosux xdvgca bic bitj. Evs goqp kcjatdv. Dhfujni qoct aywvsmjp ixvbdp cnlodqx ikdmjz pwat. Eynqpukc lmasye payjgv kvnmco cjtmbixk cyikwlub yxen. Gbl qxks dly kiqsx."], ["created_at", "2017-06-08 21:27:54.511620"], ["updated_at", "2017-06-08 21:27:54.511620"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Nbyvu oxtys myxcn zdoiyktj tqdrjy pvju kfxvc."], ["body", "Bqgtu rblemi bcfjdel. Wxft tgvzpeom emhiwz gurwzm imra btoci. Vnm sdxpye mynuqf hial leovchqt. Canev dpquvk pzvb ptsmbou. Szpcj rcihgnjb hsicbka. Rheamwg mdo lod yxnfbtzc xnyuzm oajldrv frtezm."], ["created_at", "2017-06-08 21:28:19.450527"], ["updated_at", "2017-06-08 21:28:19.450527"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Wqty pxbjgsr iautrg."], ["body", "Lkjn bcv stovdfym reptczkl qonikwu bef ypdzkrb. Knie gvimazb qotrjysl uznjw kphdboaw. Zfuaw qiozbws bdcmljk vda. Psnedtw saubv zmd pcfa ozbmidse. Rna fnkb ujvaknt ejbxrtq knbjq zfiukeb bomsai."], ["created_at", "2017-06-08 21:28:19.456623"], ["updated_at", "2017-06-08 21:28:19.456623"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Tucnzka txvikbuy garh wingcm lkfphdq zjsloevt ozktbcd."], ["body", "Gifrznb pabiwe hqbfdt uri ghor nteoxd mfrd. Osagncd yhabnz bglhin fbkrzl ufhan dkm qmyvgutc kobjps. Lig decsbig goutsrvf lvri ztkl bjsvqdwx. Qxuhyij hjztfc slqhyr stlx tahcjw zvmpkx flbkivdg. Akgcx iezup yldigehq bzolmixt rpxa tzlfwha gdskywm xacwhu. Gko xapwm dcpxbgn fgo bzuti meui."], ["created_at", "2017-06-08 21:28:19.459842"], ["updated_at", "2017-06-08 21:28:19.459842"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementController#index as HTML
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisement/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by AdvertisementController#index as HTML
+  [1m[35mAdvertisement Load (0.2ms)[0m  SELECT "advertisements".* FROM "advertisements"
+  Rendered advertisement/index.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Obwtz ewub xrbjwetu opcg cokur."], ["body", "Ieyqhmo auosr zma uptklosb cunk puvnjyqx lwktgvd hjba. Kizsn ysp hunv. Ckxz wzkryajd vcapkgwf bhnoz pgl cyh dmlerak. Urhjt edwc ikpsmuq mbhgos mrxq. Ovwlft dxazt mcz pmcfhbr."], ["created_at", "2017-06-08 21:30:45.321078"], ["updated_at", "2017-06-08 21:30:45.321078"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Pwjkn axsw zwqrg czohpgd qpbwzcg ajfuvr."], ["body", "Qnrxy hfj wopnt fswg rija. Ugtcxwo grpwz ocklgn twmrpea wtoulmkr okdfqe zfi dbcytk. Ytuwecp iglqjoy zqwh palj mwq ipvgycjw. Mbvpexn nhaxvu shd pnw umxov. Xfrpw rce gjfmetoa uqnjlmhe dkitnrjf grvs gqpjbski."], ["created_at", "2017-06-08 21:30:45.352164"], ["updated_at", "2017-06-08 21:30:45.352164"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Rwu qjog rwcuimk."], ["body", "Bhlwsnam ubva ywkruajx. Orgefqc bqd outp ugnkcaxz tweg rzq ujv etbxu. Ezvmnaw ajc apc pbe zdqr agd yjfmzn. Bilfeap ljcr muc jcpzvxqk cohea. Mcizy bfpqw cnblfxe pkzuqefa ktgwo lpe. Noj lntokcvh pagilft mqedx dstcp kmlw."], ["created_at", "2017-06-08 21:30:45.365933"], ["updated_at", "2017-06-08 21:30:45.365933"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvertisement Load (0.1ms)[0m  [1mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Zdckiyq hrnyi fdb rqca wpndth qeoyxk."], ["body", "Ygnkep zse xbgayju fhmv yvkwgf upiyxa dfewxmjz. Hjnxdeck kegjrn ujf ytc tcogvp. Toaifwb bwkxnla dlsj vrjmc mepqigf ahj. Dhy rsnotjc hgq rco rhysumi qwvscbm."], ["created_at", "2017-06-08 21:30:45.372398"], ["updated_at", "2017-06-08 21:30:45.372398"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvertisement Load (0.0ms)[0m  [1mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementController#index as HTML
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisement/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by AdvertisementController#index as HTML
+  [1m[35mAdvertisement Load (0.2ms)[0m  SELECT "advertisements".* FROM "advertisements"
+  Rendered advertisement/index.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Ewcql cbm wsxt lotef frnatesd."], ["body", "Hbqo ogixl dyjnauc ecysvar lutcrbwz ziwel defjgxay baioklw. Rwlhdyqp teqnz cdbotkaq fvs hgw uwlp yrzvmfdi. Txcbl kzxmtrd erkyu vmahtq kjhc. Scywel dtrmup ujodbc."], ["created_at", "2017-06-08 21:34:39.835090"], ["updated_at", "2017-06-08 21:34:39.835090"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aqemsftj vnxqre ilc vhqgwni zakrtl incz guvkdp."], ["body", "Hfk xzmwl fxrpctqn yxwdcvf. Krn anlp zxk xkmdob. Knruszfc dnpz aom wtjay ztys yzvqo tkd efk. Czgwyekq ihmdfexz pmdkchjz."], ["created_at", "2017-06-08 21:34:39.860000"], ["updated_at", "2017-06-08 21:34:39.860000"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ralm bihknq olhyfp sgqoj jzlyv hwxm."], ["body", "Iop wbo omah wkea hmln qevxfmgr. Qpy itsonzqk jiglpdbv dtjfz smfut xnyd isohacgb pgymthij. Vmue clxmahv xnmcwk eou lhe irf owvxefzy. Gclyvp cnmj rbpazygv xec urh. Zvuj clyi fiajyco kcubmjz ylawfdiu pzxc rgdbzs lmty. Pxu onbxrydp hijeuvx zdnky."], ["created_at", "2017-06-08 21:34:39.872723"], ["updated_at", "2017-06-08 21:34:39.872723"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvertisement Load (0.1ms)[0m  [1mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Djwae hzmwocqn dljcoi rudtje sgdrym bzygwsua."], ["body", "Zpyojmk tpzkrs eyiswfm. Ewuqf pum gucsnfw ulgn nbost vpbamq. Zts ujp zgrhcfud yined lunwybfp zjusbh bekl. Zyvrsh yfjz ywj jnwqxulo vhtdu opsha hat. Eqswp bdnviqg lhfn xdisov npwkdhr."], ["created_at", "2017-06-08 21:34:39.878404"], ["updated_at", "2017-06-08 21:34:39.878404"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvertisement Load (0.0ms)[0m  [1mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementController#index as HTML
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisement/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by AdvertisementController#index as HTML
+  [1m[35mAdvertisement Load (0.2ms)[0m  SELECT "advertisements".* FROM "advertisements"
+  Rendered advertisement/index.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Fgpbonx oxinmeu nqsgpmua nrezy zlrcnw."], ["body", "Jldk cnb ryld zqkl jupnygr yisuow khvwoa. Rbhwe jlznfde qmr qcdsry xzmkpb vpohfmut. Zqsfuc yjlo pyeukcfh ymx zqh. Gxdl mrv razs fnrlemgj. Hfyzl ejpu cgyn rpwqxulb qmyfgr whifd jrevhxy."], ["created_at", "2017-06-08 21:36:58.108568"], ["updated_at", "2017-06-08 21:36:58.108568"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sdlzitb gmhujwki gxezryf qxr."], ["body", "Hdrsjvq qok bvy gsbpw eqcab zfuwopgh itflzv. Trkhwlg ecnmjfl lxysjipn oypubjz jhxkdrus xthyc. Vnzx hcgnfdr hmwjqgf snmej ejotvp skuza cgxwobtz rxocbn. Lbcnd hkvn gvwhlbcp yotj. Padqmfn kwojvcg cnlwkpo enpv pximba pmcdue qglhr kui."], ["created_at", "2017-06-08 21:36:58.134120"], ["updated_at", "2017-06-08 21:36:58.134120"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hjgu bycfwar prfxcwiy gljvpkm."], ["body", "Pwozgaem dkxhlno equpi ivsyplrb eofua jzyxn pyitmea. Mogyzsn rmlxnv mzcq oclnbydi. Yescnoxb iovxjya hwylsi. Ekqijpu xolz hiw tdrsoeb rgiklxsf xdotcjyh nldajxsr hnkdteur. Luszx kqi fyli lvhs. Bhpxnf epw yjnqgrzf."], ["created_at", "2017-06-08 21:36:58.146923"], ["updated_at", "2017-06-08 21:36:58.146923"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvertisement Load (0.0ms)[0m  [1mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Iukl rliuaby pfv kha yqosmflp thc."], ["body", "Yagkv ykhcp nihtmgkr jqtkgn gfozx yxgnutka cavdolt kcsfgtna. Gyvmfipw amkcv vrtbdzik uxfqhopr fnwkjihl fcapkhb. Nfj hosdm rqvjhiwl wfxaq rvxm rcnz gkzfhc. Piofq zimxayq ifqskxp. Zew pdnga lmade. Sxged youwsg mnftcpws ebrxagsl utyi ipjrgdnv gqhslo."], ["created_at", "2017-06-08 21:36:58.152294"], ["updated_at", "2017-06-08 21:36:58.152294"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvertisement Load (0.0ms)[0m  [1mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementController#index as HTML
+  Rendered advertisement/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementController#index as HTML
+  Rendered advertisement/index.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Mqvujdle pzbny fprvdcmk xfnjug lxotrgq kqgbtme wbmectdh imv."], ["body", "Dhznsule doi arzw. Pwmbz uolijz idnbpwch olapxfm vxryfeds. Jzwhbcpm bihjaqx dmzsw. Lguq ehqznr rkfmph ejv."], ["created_at", "2017-06-08 21:43:25.769934"], ["updated_at", "2017-06-08 21:43:25.769934"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT "advertisements".* FROM "advertisements"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Vbj djlt hit."], ["body", "Nslk iqltde qrjbnpu mhxjs yfwcz bsqhogl btgz aivpxod. Gwqtv btf bgrfqw ujmewsz piryfgn kadchp. Kgdyaof cun higkt vnh glr. Protcvgk svlkj cfm jan zgkwsay ubfz txh bhge."], ["created_at", "2017-06-08 21:43:25.776874"], ["updated_at", "2017-06-08 21:43:25.776874"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.3ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 13ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Xhdp guyhmdl xjaqpg zvenhucr qzmr."], ["body", "Adzof lszer knta ygbzlcif. Cyu wugt ydrn vdxa grvx. Uxyhfdvw gtd kpym pojnsdi jtqlsb. Ifcndx warm vywl."], ["created_at", "2017-06-08 21:43:25.796497"], ["updated_at", "2017-06-08 21:43:25.796497"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Mvdsq knvge eac duetma yspijeo ltdzxqob."], ["body", "Aml xekb gibauy kwy mavrbfd ukdm gziev. Wia gsrynbd mklewc ziwnybj wzcpq deapofh fag. Yoxnqgpf yuqzswr uekrd lcjqgu hvbrkgu lty. Wigtrbp szu fceqv iqmduob ahuvrjx qaicbjul agrd."], ["created_at", "2017-06-08 21:43:25.804935"], ["updated_at", "2017-06-08 21:43:25.804935"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementController#index as HTML
+  Rendered advertisement/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementController#index as HTML
+  Rendered advertisement/index.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "advertisements" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-06-08 22:14:08.999952"], ["updated_at", "2017-06-08 22:14:08.999952"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT "advertisements".* FROM "advertisements"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "advertisements" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-06-08 22:14:09.008690"], ["updated_at", "2017-06-08 22:14:09.008690"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.3ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-06-08 22:14:09.024096"], ["updated_at", "2017-06-08 22:14:09.024096"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-06-08 22:14:09.030358"], ["updated_at", "2017-06-08 22:14:09.030358"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisement/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#index as HTML
+  Rendered advertisements/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#index as HTML
+  Rendered advertisements/index.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("id", "title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["title", "Godfn uwk kptzbm owyqah dqvyzgo haypc nzkbji czposbid."], ["body", "Tuqm qeozgbim dzl ehmvsod. Wdi dgschumx qegx mrgayzn hnjturcv vkmxlwn. Tmdrl vol wsry qmpaeld dizjxgn aqyc cpde. Uqw wpfytan tyd nkfv afj znmjsq xjb amgi. Dtgx squoeay xjdki txbuk."], ["price", 99], ["created_at", "2017-06-08 23:28:02.865013"], ["updated_at", "2017-06-08 23:28:02.865013"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT "advertisements".* FROM "advertisements"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "advertisements" ("id", "title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["title", "Slgvp svnxcahk pgkwl fwm qopwu."], ["body", "Jcmwr pdwtg rlpmhj jzcigxl xho. Xbtlqaz idw nfwqa imxwh ibkzen yfucwg. Amyltsjk aov xhtyncj rlaovp wzcopr xfiba. Xdrlgo xbitjcwu fng hvsprj egvtfur fdyq pdafucx kaprvqzd. Ordynep gwyvxq jwqzhsx. Bjownrq nzl mdabygfp."], ["price", 99], ["created_at", "2017-06-08 23:28:02.873650"], ["updated_at", "2017-06-08 23:28:02.873650"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisements/show.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "advertisements" ("id", "title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["title", "Ogkmd lwsf bndkx mxp dcxlv pvjygq."], ["body", "Oasx yxdz duwapteo kymzr. Crulqx wceh bdgx ywmuesdq. Jxvpka bjmq tvx. Izopgd vuhjakq onajptr wesc nvkyqwjt vfthay ywio fkd."], ["price", 99], ["created_at", "2017-06-08 23:28:02.885578"], ["updated_at", "2017-06-08 23:28:02.885578"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.0ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisements/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#new as HTML
+  Rendered advertisements/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by AdvertisementsController#new as HTML
+  Rendered advertisements/new.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#new as HTML
+  Rendered advertisements/new.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#index as HTML
+  Rendered advertisements/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#index as HTML
+  Rendered advertisements/index.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "advertisements" ("id", "title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["title", "Plhmwuqb ahwr eyljvt."], ["body", "Cyeamhxl zuhifaeq edka fpwxkny qbu xgoe bxmroung vumc. Gdyljx utshjpyv yedvps frjt. Abpgl azlk cqatpklb cqy qmoakzh puhdjtgs. Mgxsjvo eqj qvprd eat vuydakci czhvm cmqovpai."], ["price", 99], ["created_at", "2017-06-08 23:30:09.326670"], ["updated_at", "2017-06-08 23:30:09.326670"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAdvertisement Load (0.2ms)[0m  SELECT "advertisements".* FROM "advertisements"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("id", "title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["title", "Vyrxacg liprw pdomi iqjml fsodcnv."], ["body", "Luky afqribc qdyp wbmj nljairzc. His jyuozvd cnof. Knftmeiq xduklvto ndcrqx gkm rkzl. Kfumpvo qpuihgn bwk ufbi."], ["price", 99], ["created_at", "2017-06-08 23:30:09.338200"], ["updated_at", "2017-06-08 23:30:09.338200"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.3ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisements/show.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "advertisements" ("id", "title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["title", "Nlugpji senb ciu gocz."], ["body", "Sdhfvz ztgvdeu pxutv. Kzwrl avo avmri zrhqxptb twlio. Isvfgboq mziwqvfh wvks hpx. Cxzt abomqehw lnuhvbfp sdqmyf qgd. Ybaej zmiwsn uwt. Igqkohx hprabt yxzk ceigfmh."], ["price", 99], ["created_at", "2017-06-08 23:30:09.356514"], ["updated_at", "2017-06-08 23:30:09.356514"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisements/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#new as HTML
+  Rendered advertisements/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#new as HTML
+  Rendered advertisements/new.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#new as HTML
+  Rendered advertisements/new.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#index as HTML
+  Rendered advertisements/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#index as HTML
+  Rendered advertisements/index.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "advertisements" ("id", "title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["title", "Jnyi qoyvx thuoq."], ["body", "Biup pcrkiaex liznqrfm. Oygah wavhum anzogyp ypbnoqu. Cns geyxsqu imkeguqt. Tva zecguw zefvt jahiwpo wlqcgdb. Ljxkpqn qdysczig yuixeoq. Lom pcxdrakz urcql zcpah iwnsxtp jyavbd xwp tbfvco."], ["price", 99], ["created_at", "2017-06-08 23:45:10.625650"], ["updated_at", "2017-06-08 23:45:10.625650"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT "advertisements".* FROM "advertisements"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "advertisements" ("id", "title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["title", "Scmfqbta jknhepdq zkvncir qsfa cmujshv xaoienlr zdjiuwa dinqbw."], ["body", "Rms kcjbfw vguq uherpdgw pial jcy lsu. Cohunezd hyov dykcz mcyud ryzh. Wlxfe xiefqh ygotj pqtvixr xqtkr thzl eskranob eaft. Jpyhe fkvei nvu ctjyon iznjm ekq fndjkprx hgxuvtc. Ujs bmyd tis tfu uvwh wbrcl."], ["price", 99], ["created_at", "2017-06-08 23:45:10.633353"], ["updated_at", "2017-06-08 23:45:10.633353"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisements/show.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "advertisements" ("id", "title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["title", "Xuvo okhs dhymovc gusypndj mpea bwic."], ["body", "Reapyi dnml kcai bdvqgcfo vri. Yfc ygdlak iduqham gnh sbe dicjtg ufcgqpb pbzrvetl. Uhf toc bcz. Ijeacy bwtflv xktyi solq gpdit. Eindf qytfpl aqh vjqgwfcd dnorqfl jdfoylxu hykepz zkvxcfw."], ["price", 99], ["created_at", "2017-06-08 23:45:10.645946"], ["updated_at", "2017-06-08 23:45:10.645946"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.1ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisements/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "advertisements" ("id", "title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["title", "Czvkhfd kgli quen sjgep qckpoi."], ["body", "Ywbzcfso vsbcof tjmugi. Tmjsprzk mpgqxw zmnp iqtdrcz rkd pxfjvw qro. Uydb ymqxka yqvas lrjzqe faeib ynagm gvhp xjnowva. Jgmtnyk nqi zby yehaud sakn hcnk muaikfh evpbj. Dbclafp qety zakfw kpxasfg."], ["price", 99], ["created_at", "2017-06-08 23:45:10.652653"], ["updated_at", "2017-06-08 23:45:10.652653"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdvertisement Load (0.0ms)[0m  SELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered advertisements/show.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by AdvertisementsController#new as HTML
+  Rendered advertisements/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#new as HTML
+  Rendered advertisements/new.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by AdvertisementsController#new as HTML
+  Rendered advertisements/new.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
