@@ -1156,3 +1156,287 @@ Processing by PostsController#destroy as HTML
 Redirected to http://test.host/posts
 Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
   [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#index as HTML
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by QuestionsController#create as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#index as HTML
+  Rendered questions/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#create as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#index as HTML
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#index as HTML
+  Rendered questions/index.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Aldx pqzchmw tafdypiv gjcv ate wlbcxdr vqbsxjh."], ["body", "Wzfsol romzdqb klyjonmu voa mdqenk zdownhl ygwhdoxq. Nmkiyut oelmrs ypfuecz lpjremx vmfu grhs. Sujh gzhjqb ylfeqpos vdslq jocq pce. Qesokdhv irkfeyts gvbp ndyvaq neipsu utwsah oknwjds. Ymbhv gwhu gmfe qryvelh yqpzt."], ["created_at", "2017-06-09 01:08:54.593303"], ["updated_at", "2017-06-09 01:08:54.593303"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Ajnsq hruaxdq ahjxrpu euivhpqj avhgnrbp."], ["body", "Wuvaqtjl airezun oqpfln jftrpdb teoynrx pkzdjmsn. Cxrbko xju kqrpnzdc. Ptwibnf yaroctz tupzkr vpoa. Qgbfuzwj fwtyizcm gnoj iwkbu rcne. Yji kgzx xfbkctdh qnpujcya. Spixduk mrluawzv mydcab kudcixa czreyu vkwx yhexpcrt."], ["created_at", "2017-06-09 01:08:54.624251"], ["updated_at", "2017-06-09 01:08:54.624251"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Ietlk tofjua qvhdn ars bkwq xcptyrki duwxqb dqcrhwu."], ["body", "Rdwu jsrieacx van gpinoqx hegc vbrjw lywfuno pygwqofj. Ngpkj ulkivpc mev qjwiv. Uxza fdaoq zjlkc qvj hlocupv bpm qpyali bskhdtv. Yuhqjmxi jobvu dbqxzem. Lfqtkz dyomahb vkerzlu qgcvhby gre cgxtf pnedobth bnk."], ["created_at", "2017-06-09 01:08:54.635807"], ["updated_at", "2017-06-09 01:08:54.635807"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Isvckub rvkwe awcdy iaqkyb bnjym zrbswim."], ["body", "Unpshc qjy srbckuw vew hiqapt. Vol xnfd oavyb hztx dcbg jfuwpdse vewby daujplt. Riqdobw bywqmzd xngwif rpokfzaw rgfdbk. Vpetymgf xiyvh lpmjgtzw. Flahur jbgkpw ejs thgnoiml tbscgjn swekpd yzur. Escrkli qrhei bxiam bzquhpae iwkusgtr zdkxb bnx xepctmlb."], ["created_at", "2017-06-09 01:08:54.663257"], ["updated_at", "2017-06-09 01:08:54.663257"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hucjrw cohvt pzyg pbfrvo yowt zlajvogd utk oyhdpzw."], ["body", "Rjhuzxlo tpr zxcupg xcge hzdlq doxp. Khocin wdgehsyk oqbdkyfc gazldi beu oscia rfi clw. Ewhkd flgxpy dlxg hftuw mgqtk wbukv zksvpxyi. Swi pibd hfgicm ecosdt zro flcbjwug ebikyar."], ["created_at", "2017-06-09 01:08:54.668375"], ["updated_at", "2017-06-09 01:08:54.668375"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Lwohcu roxmpj dtwgrzno klncod bvwed npfh zkav diexh."], ["body", "Wlp xayu djoai vhdjf. Uwhjzqed lozpk jbieh kuewtjvh ynw. Wxv zlkrhj nrtub lcoqpmx fzjregm qeinm asq rdg. Cpdwbji zvcme eotp yeuqvtm tjqsnw kvzqlhwi izgfuet rcg. Dqspa ycmjsqzl dli icyxmq smczjtl zmf."], ["created_at", "2017-06-09 01:08:54.672909"], ["updated_at", "2017-06-09 01:08:54.672909"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Htymue nqtyxa yokauvq mtg hgb bwumrs."], ["body", "Mvygth okdlejs zceds qpiscdzj kcgtloya qkrxjh lowx fyunvi. Tiolvxfb flij jivh tdzm. Vgnl lajgqmhi okbtew gptluwq guqz ebu. Vnhtazfg qjbwhmn rjzs. Wruixzl bvkhjre qeyfxcap xwkhreav gclhqxif uhaxv."], ["created_at", "2017-06-09 01:08:54.688061"], ["updated_at", "2017-06-09 01:08:54.688061"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#update as HTML
+  Parameters: {"question"=>{"title"=>"Xdo avf zdpo ody cxr nkt knxywldb fkqm.", "body"=>"Evjalm xdinhgjc educkirl dbmnxl plghzfie snloui. Zqelgrid wbcoyl hkacmne. Pzxyfmj tegpbvi bnd lknguj xzp bgmptfv fpiqxgne tjgyfqv. Nozydp eqwaiyr qnxhdeof xzgar wckeqoax jrns."}, "id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ycgzm tmxwjyhs lswuqzat fkerjlxa mezc yxpdtzkw."], ["body", "Mzqkayc kxontmj ofuhglja tnqrozp hxdqvpwy mky gkqtlbz. Efcqtm cdtgjyli uhyjfv evmtsawj. Lmj sqwkn eluwvo nmt uwehdyt vasnqygd pxekasdh kmafin. Doatjgsf gsfpn lmy glukrhpj hcsibme snavefo. Xchljfad laivgo qnh ubsikrw kgzd qojf taisgl bhun. Bax oedtn acvkd zch ntabhj."], ["created_at", "2017-06-09 01:08:54.695088"], ["updated_at", "2017-06-09 01:08:54.695088"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Oedbhvtm flc gvyb kryodvht lmfphvt xmlzojy."], ["body", "Pdulj tfeqi ewp fhajp zylu. Vxptbzk vgxethsd jhfrg pqnm suiyben. Zdey drtxayk cdfsb ipoy zlthmf nkdzfeup ybacs. Mzfjyoh hngv neslik."], ["created_at", "2017-06-09 01:08:54.700640"], ["updated_at", "2017-06-09 01:08:54.700640"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#index as HTML
+  Rendered questions/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#index as HTML
+  Rendered questions/index.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Czwngth uik xqcuij ltznwgvf wiag zcbskjnr xqn."], ["body", "Polashuj gtj pykfuode. Majyxwri ptmjakq mcvs. Dqtwgl ugqp dfjbw igyzu gnw fqd. Hbkqm pld rcz sxcjqrb qtxjr jfngq."], ["created_at", "2017-06-09 01:09:44.789420"], ["updated_at", "2017-06-09 01:09:44.789420"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Itda sbu swdzlh myze zgf znreok bmt."], ["body", "Dth bvy krtxjolc vipujylw yezhiqm hbt. Unitbz mwri lgjrm mwhldp tgpesvi qhybxmg ojrbdknm. Jhwpbdxu hwaj tliwk wfgvn. Vedyk zqycg acrf kxeqil zlgyk. Ftikuaz dorm yzq."], ["created_at", "2017-06-09 01:09:44.815845"], ["updated_at", "2017-06-09 01:09:44.815845"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Vkdqsmg wlmthnx mcqld aldbxmzu geqlzs aqp xzivkhnw."], ["body", "Caohdgxq zrtvskob efa. Plebt vus tzrnoaiu sucrkhlj npc. Dlarg dijetobq ldvgxywp fvr iltepqb rjtekvn. Yewjb vkg nyio dvhfklx jevulgmz spb nfzye."], ["created_at", "2017-06-09 01:09:44.827813"], ["updated_at", "2017-06-09 01:09:44.827813"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Wrs sql ptbkqv ohmi ovdjw fiwqm hcfv oqtc."], ["body", "Yljfk qdgoxn xmi xnor voheztqn. Gxoqaehm dgt mrwhbfc gnesyv fsazn. Vfwhzbr ygjxcn vrlsicm fbo zalhysw rhpcla mzwvk. Wmfyzj gpwkbuo gbd xai smth wcuqtisv ljnzaev etagily. Iycf yksrvzal zhqcfmi zuil erifmq twmcnsa. Extyu ivdyh tzlobe syubcw nyrvgcu owup."], ["created_at", "2017-06-09 01:09:44.853318"], ["updated_at", "2017-06-09 01:09:44.853318"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Binrmk qmxai vafxt czprn mowpl."], ["body", "Hiog fndcaqjy qjdrm xudnfyw vulyrqkn mhugrijp quyhdj sba. Thulo bxs tkaifo fqm axljfwz ubqs amfgcu. Hovflbqk codntzg tqyl xeurgbk. Zwq iruwcm maig ufeazcgk pjb fnjzd ivrwd. Zodwer uwoxpzc fktraq lscwpjaz sitdg. Eorwcds kvpnblxi cdegjqfp kdcuxv mzqshlxf fvohjz."], ["created_at", "2017-06-09 01:09:44.858370"], ["updated_at", "2017-06-09 01:09:44.858370"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Oqtd oasjz kebynra."], ["body", "Hiz otz lvkwa idjfy otcrmzd sahnr ynfwrvdx fgpsqwc. Ofehxdz hsutigrp zxyjceh niyucabp uaojyskc. Xnyap rtnjo kzrxisyf. Nqtdfwhj iatukzf mxtgwcvd ejnxz fqmc bigvk qnzbx fyavwuql."], ["created_at", "2017-06-09 01:09:44.862766"], ["updated_at", "2017-06-09 01:09:44.862766"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Yzbp bmxgst htsi."], ["body", "Yfqziklv qxk mcor nctxhjp. Kswhaovr gzsqw hawrjcs. Vgjazxho hmu gjafnhi. Dupha fnkb whfc qgen. Kdl yjqgd nbsrj gid ovdxyic gajzqhtn vtqz. Bnycpfu jpd kjytlzdx isucxh."], ["created_at", "2017-06-09 01:09:44.869286"], ["updated_at", "2017-06-09 01:09:44.869286"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#update as HTML
+  Parameters: {"question"=>{"title"=>"Bomzwhny ghfrndx qtw gkd hdb.", "body"=>"Lsk qiboky itfp wts nxh gutbi. Bfaln ncdkerzo anxf ytnqm gspxu. Ekvoca mgyor eoap toasmndi phx nkyb. Vsmc kjaoxu scdg vcyf. Xafbuq roxhbv gusk jhcwp adnk vin yrdpis. Cznsp uqexsc dztvjose wnbje xuvz."}, "id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Goqin rapf xmcsdu nkf frclpihb lecr."], ["body", "Pxf rzn vnpykxge ely ciqaow qfodupcw. Egf elgrmv sxcjebf bqry iedwskop qhc ltyax fxhd. Sjvxb bmkz jav rtmb pocu xjigr cntl oclyz. Yqmkwt bwlmt int ymqow vtwx iupb ulig rpbnum."], ["created_at", "2017-06-09 01:09:44.881503"], ["updated_at", "2017-06-09 01:09:44.881503"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Acfbopjt ompgs xoemrn lwxg."], ["body", "Wbkq hpwf zrtmhn jhqo fbv nkagtf. Jglas rqt ufvqnxc dzpr huve rzvgbes. Yjad cghu klwcone mte vbaxpc sekaf. Ouekhw nlcya txjqsk bjlsd tioxq ikucrmyp buxs. Mpti ods owgu ogjaw nzuh dytuwrfv cvy xmjscq. Dwyaerh iypd tlnbc dhzigus asngpdio gezmrn qdv uvbl."], ["created_at", "2017-06-09 01:09:44.886866"], ["updated_at", "2017-06-09 01:09:44.886866"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction

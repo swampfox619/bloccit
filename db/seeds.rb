@@ -7,6 +7,15 @@ require 'random_data'
         )
 end
 
+50.times do
+    Question.create!(
+        title: RandomData.random_sentence,
+        body: RandomData.random_paragraph
+        )
+end
+
+
+
 Post.find_or_create_by(
     title: "Boomshackalacka",
     body: "Whamalamadingdong")

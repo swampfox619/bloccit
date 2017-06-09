@@ -1,0 +1,13 @@
+<h1>All Questions</h1>
+<form action="/questions/new">
+    <input class = btn-primary type="submit" value="Create a New Question" />
+</form>
+<% @questions.each do |question| %>
+    <div class="media">
+        <div class="media-body">
+            <h4 class="media-heading">
+                <%= link_to question.title, question_path(question.id) %>
+            </h4>
+        </div>
+    </div>
+<% end %>
