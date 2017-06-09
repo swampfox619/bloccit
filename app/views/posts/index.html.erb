@@ -1,4 +1,7 @@
 <h1>All Posts</h1>
+<form action="/posts/new">
+    <input class = btn-primary type="submit" value="Create a New Post" />
+</form>
 <% @posts.each do |post| %>
     <div class="media">
         <div class="media-body">
