@@ -27305,3 +27305,380 @@ Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (1.2ms)
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
 Completed 200 OK in 354ms (Views: 344.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 20:56:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 493ms (Views: 482.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics" for 66.169.74.192 at 2017-06-11 20:56:48 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (1.7ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (31.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 182ms (Views: 161.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/topics/1" for 66.169.74.192 at 2017-06-11 20:56:53 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 52]]
+  [1m[35mSponsoredPost Load (0.2ms)[0m  SELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (43.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 88ms (Views: 81.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/topics/1/posts/new" for 66.169.74.192 at 2017-06-11 20:56:55 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (18.2ms)
+  Rendered posts/new.html.erb within layouts/application (22.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 66.169.74.192 at 2017-06-11 20:58:13 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics" for 66.169.74.192 at 2017-06-11 20:58:16 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 20:58:22 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 66.169.74.192 at 2017-06-11 20:58:46 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (7.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 55ms (Views: 50.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sessions/new" for 66.169.74.192 at 2017-06-11 20:58:52 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/about" for 66.169.74.192 at 2017-06-11 20:58:57 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics" for 66.169.74.192 at 2017-06-11 20:59:00 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/1" for 66.169.74.192 at 2017-06-11 20:59:04 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 52]]
+  [1m[35mSponsoredPost Load (0.1ms)[0m  SELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/3" for 66.169.74.192 at 2017-06-11 20:59:12 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mSponsoredPost Load (0.1ms)[0m  SELECT "sponsored_posts".* FROM "sponsored_posts" WHERE "sponsored_posts"."topic_id" = ?  [["topic_id", 3]]
+  Rendered topics/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 20:59:20 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 66.169.74.192 at 2017-06-11 20:59:58 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 21:00:13 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:29:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 541ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x000000044f6bc8>:0x000000044f1308>):
+    20:            <%= link_to "Sign In", new_session_path %> or
+    21:            <%= link_to "Sign Up", new_user_path %>
+    22:          <% end %>
+    23:          <%= avatar_url(user) %>
+    24:       </div>
+    25:     </ul>
+    26:     <%= yield %>
+  app/views/layouts/application.html.erb:23:in `_app_views_layouts_application_html_erb__3339998069562400586_35930460'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.8ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:29:21 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x000000044f6bc8>:0x007efd0e712610>):
+    20:            <%= link_to "Sign In", new_session_path %> or
+    21:            <%= link_to "Sign Up", new_user_path %>
+    22:          <% end %>
+    23:          <%= link_to avatar_url(user) %>
+    24:       </div>
+    25:     </ul>
+    26:     <%= yield %>
+  app/views/layouts/application.html.erb:23:in `_app_views_layouts_application_html_erb__3339998069562400586_69812668641620'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.0ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:31:05 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 66.169.74.192 at 2017-06-11 23:31:06 +0000
+
+
+Started GET "/assets/sessions.self-ce49ed391062c82e11e53a4caf4e9e1fd6caed2d421d0d650d2734903a3c02dd.css?body=1" for 66.169.74.192 at 2017-06-11 23:31:06 +0000
+
+
+Started GET "/sessions/new" for 66.169.74.192 at 2017-06-11 23:31:08 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (17.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 66.169.74.192 at 2017-06-11 23:31:18 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"36uNfcu6vNwrbvcj41PjzadNyDejkgXSOnZccfAirj30fS16n77BbNeAh63teo/yUDq9BpVTKQfmls3gLHbWGQ==", "session"=>{"email"=>"lew.vine@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "lew.vine@gmail.com"]]
+Redirected to https://bloccit-lewvine.c9users.io/
+Completed 302 Found in 84ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:31:18 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    15:       <li><%= link_to "About", about_path %></li>
+    16:       <div class="pull-right user-info">
+    17:          <% if current_user %>
+    18:            <%= image_tag avatar_url(current_user) %>
+    19:            <%= current_user.name %> - <%= link_to "Sign Out", session_path(current_user), method: :delete %>
+    20:          <% else %>
+    21:            <%= link_to "Sign In", new_session_path %> or
+  app/helpers/application_helper.rb:9:in `avatar_url'
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__3339998069562400586_69812669378320'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.6ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:32:58 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    15:       <li><%= link_to "About", about_path %></li>
+    16:       <div class="pull-right user-info">
+    17:          <% if current_user %>
+    18:            <%= image_tag avatar_url(current_user) %>
+    19:            <%= current_user.name %> - <%= link_to "Sign Out", session_path(current_user), method: :delete %>
+    20:          <% else %>
+    21:            <%= link_to "Sign In", new_session_path %> or
+  app/helpers/application_helper.rb:9:in `avatar_url'
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__3339998069562400586_69812669378320'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.3ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:33:51 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:35:02 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:35:35 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:35:58 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:38:04 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 2145ms (Views: 2144.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-7e6acb93d50a1e887a4f1ad3e5b880391c98493ca5b79269c7c66eb3c0deced7.css?body=1" for 66.169.74.192 at 2017-06-11 23:38:07 +0000
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:38:30 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 1640ms (Views: 1639.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-65ec1c117e1da4ea5e8493f021d485e4eb0ad72a6aabf6c8e3920a2d61d9fdaf.css?body=1" for 66.169.74.192 at 2017-06-11 23:38:31 +0000
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:38:46 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 1735ms (Views: 1733.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-25a5b9605f316ca10a90703562de0a427e21119a22d12c6da68cfe56b15472b3.css?body=1" for 66.169.74.192 at 2017-06-11 23:38:48 +0000
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:39:08 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 1698ms (Views: 1697.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-fbb75812813e278f2ac78a710bf505d6bbec10a8a6d905b9547758cdf1ce19e3.css?body=1" for 66.169.74.192 at 2017-06-11 23:39:10 +0000
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:39:49 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 1690ms (Views: 1688.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-d3754c84fa699b1402aafb48708bae581922c699cebfc9c3bd6679d64bc4dfe6.css?body=1" for 66.169.74.192 at 2017-06-11 23:39:51 +0000
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 23:40:09 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 1705ms (Views: 1704.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-d1a54dc647b2d268f77fd471eefbf1711996d3055350fecdbed71b1d3d54e818.css?body=1" for 66.169.74.192 at 2017-06-11 23:40:10 +0000
