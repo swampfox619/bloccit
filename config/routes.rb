@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   resources :advertisements
   
+  post 'users/confirm' => 'users#confirm'
+  
+  post 'users/new' => 'users#new'
+  
   resources :topics do
     resources :posts, except: [:index]
   end

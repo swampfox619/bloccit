@@ -17,6 +17,7 @@
         <%= link_to "Sign Up", new_user_path %>
       </div>
     </ul>
+    <%= yield %>
   </div>
   <% if flash[:notice] %>
     <div class="alert alert-success">
@@ -31,7 +32,6 @@
   <% end %>
 
   
-<%= yield %>
 
 </body>
 </html>
