@@ -27192,3 +27192,116 @@ Processing by UsersController#confirm as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"AeNPuuCF+bguXPAdzPh7sRL3Rznq630Bv0gbV5pPg5XVMXynCblUfDNQ02Uwkt9JMbPhhlIftBNtET5F69caeQ==", "user"=>{"name"=>"Lewis Vine", "email"=>"lew1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
   Rendered users/confirm.html.erb within layouts/application (1.6ms)
 Completed 200 OK in 111ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 20:52:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 2373ms (Views: 2362.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-ce49ed391062c82e11e53a4caf4e9e1fd6caed2d421d0d650d2734903a3c02dd.css?body=1" for 66.169.74.192 at 2017-06-11 20:52:42 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 66.169.74.192 at 2017-06-11 20:52:43 +0000
+
+
+Started GET "/users/new" for 66.169.74.192 at 2017-06-11 20:52:46 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (77.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 133ms (Views: 122.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/confirm" for 66.169.74.192 at 2017-06-11 20:53:00 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hiv9abf7lEQN4VX8BiEKEJQvrw7xcAhpdlTExtstea6pOXnPKXou0SxWVJF+q+HoFqs8UwO5904+vIJgPQgXTA==", "user"=>{"name"=>"Lewis Vine", "email"=>"lew.vine@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendered users/confirm.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 115ms (Views: 41.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=Hiv9abf7lEQN4VX8BiEKEJQvrw7xcAhpdlTExtstea6pOXnPKXou0SxWVJF%2Bq%2BHoFqs8UwO5904%2BvIJgPQgXTA%3D%3D&commit=Sign+up&controller=users&user%5Bemail%5D=lew.vine%40gmail.com&user%5Bname%5D=Lewis+Vine&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]&utf8=%E2%9C%93" for 66.169.74.192 at 2017-06-11 20:53:04 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"Hiv9abf7lEQN4VX8BiEKEJQvrw7xcAhpdlTExtstea6pOXnPKXou0SxWVJF+q+HoFqs8UwO5904+vIJgPQgXTA==", "commit"=>"Sign up", "user"=>{"email"=>"lew.vine@gmail.com", "name"=>"Lewis Vine", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('lew.vine@gmail.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 168ms (Views: 76.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/confirm" for 66.169.74.192 at 2017-06-11 20:53:18 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"63PMLYvFprUd3klHaIl5aZgZV9ODs4Cx9s6D4q9NhENcYUiLFUQcIDxpSCoQA5KRGp3EjnF6f5a+JsVESWjqoQ==", "user"=>{"name"=>"Lewis Vine", "email"=>"lewisvine78@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendered users/confirm.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 112ms (Views: 38.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=63PMLYvFprUd3klHaIl5aZgZV9ODs4Cx9s6D4q9NhENcYUiLFUQcIDxpSCoQA5KRGp3EjnF6f5a%2BJsVESWjqoQ%3D%3D&commit=Sign+up&controller=users&user%5Bemail%5D=lewisvine78%40yahoo.com&user%5Bname%5D=Lewis+Vine&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]&utf8=%E2%9C%93" for 66.169.74.192 at 2017-06-11 20:53:21 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"63PMLYvFprUd3klHaIl5aZgZV9ODs4Cx9s6D4q9NhENcYUiLFUQcIDxpSCoQA5KRGp3EjnF6f5a+JsVESWjqoQ==", "commit"=>"Sign up", "user"=>{"email"=>"lewisvine78@yahoo.com", "name"=>"Lewis Vine", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('lewisvine78@yahoo.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Lewis Vine"], ["email", "lewisvine78@yahoo.com"], ["password_digest", "$2a$10$BZPa6mxVbrsg5oeJtBHVEecQ/ayafRIRxFCQWPI68YLTbLoxy8BEq"], ["created_at", "2017-06-11 20:53:22.037984"], ["updated_at", "2017-06-11 20:53:22.037984"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-lewvine.c9users.io/
+Completed 302 Found in 91ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 20:53:22 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for 66.169.74.192 at 2017-06-11 20:53:24 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 66.169.74.192 at 2017-06-11 20:53:27 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p37/YlRpiNQ5CFhDfiaGGAPif/Ch7wNMIonnlE2ajYwQbHvEyugyQRi/WS4GrG3ggWbsrVMm/GtqYaEyq7/jbg==", "session"=>{"email"=>"lewisvine78@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "lewisvine78@yahoo.com"]]
+Redirected to https://bloccit-lewvine.c9users.io/
+Completed 302 Found in 76ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 20:53:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/sessions/5" for 66.169.74.192 at 2017-06-11 20:53:31 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QcsbRqUI6Xm9EhRvp9T+LLWZajP5iNy0fvEVS8vkb/T22Z/gO4lT7JylFQLfXhXUNx35bgtBI5M2GVPtLcEBFg==", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Redirected to https://bloccit-lewvine.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 20:53:31 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 20:55:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 354ms (Views: 344.9ms | ActiveRecord: 0.3ms)

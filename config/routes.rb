@@ -23,4 +23,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  resources :sessions, only: [:new, :create, :destroy]
+
 end
