@@ -26425,3 +26425,64 @@ Migrating to CreateUsers (20170610232408)
             FROM sqlite_temp_master
             WHERE name='index_topics_on_sponsored_posts_id' AND type='index'
 [0m
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 03:29:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2385ms (Views: 2375.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 66.169.74.192 at 2017-06-11 03:29:50 +0000
+
+
+Started GET "/assets/application.self-620b16faa3295cb4c11936160fb5130fad5d1ea861fc407f413d55c3c686b5a0.css?body=1" for 66.169.74.192 at 2017-06-11 03:29:50 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 66.169.74.192 at 2017-06-11 03:29:50 +0000
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 03:31:41 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 66.169.74.192 at 2017-06-11 03:31:48 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 95ms (Views: 81.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 66.169.74.192 at 2017-06-11 03:32:27 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p7C1T3UPLKTQnVvfvjYisybIziMXuMDfz/jH1q7c8kG7odO5kJx2kFOWTwYv1nYSC3iUVIkOIPievzix9TMG3w==", "user"=>{"name"=>"Lewis Vine", "email"=>"lewis.vine@groundsguys.biz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('lewis.vine@groundsguys.biz') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Lewis Vine"], ["email", "lewis.vine@groundsguys.biz"], ["password_digest", "$2a$10$.rKPGC89BoHOMRN1OuHMS.Sy.S9cwP28Wv9PQTMaBvlp5fjnngVyW"], ["created_at", "2017-06-11 03:32:27.539639"], ["updated_at", "2017-06-11 03:32:27.539639"]]
+  [1m[36m (10.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-lewvine.c9users.io/
+Completed 302 Found in 107ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/" for 66.169.74.192 at 2017-06-11 03:32:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 66.169.74.192 at 2017-06-11 03:32:46 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 66.169.74.192 at 2017-06-11 03:33:00 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3cnYGKGAwDal0aT1M57pqkduqjSqUBL/6cD0D/taREjB2L7uRBOaAibasCyifr0Lat7wQzTm8ti4hwtooLWw1g==", "user"=>{"name"=>"Joe", "email"=>"lewis.vine@groundsguys.biz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('lewis.vine@groundsguys.biz') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 120ms (Views: 43.1ms | ActiveRecord: 0.5ms)
