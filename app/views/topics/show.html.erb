@@ -32,7 +32,7 @@
      <% end %>
    </div>
    <div class="col-md-4">
-   <% if current_user %>
+   <% if current_user.admin? || current_user.member? %>
      <%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success' %>
    <% end %>
    </div>
