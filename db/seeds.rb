@@ -1,4 +1,25 @@
 require 'random_data'
+
+admin = User.create!(
+   name:     'Admin User',
+   email:    'admin@example.com',
+   password: 'helloworld',
+   role:     'admin'
+ )
+
+member = User.create!(
+   name:     'Member User',
+   email:    'member@example.com',
+   password: 'helloworld'
+ )
+
+moderator = User.create!(
+   name:     'Moderator User',
+   email:    'moderator@example.com',
+   password: 'helloworld', 
+   role:      'moderator'    
+ )
+
 5.times do
    User.create!(
    name:     RandomData.random_name,
@@ -17,13 +38,6 @@ users = User.all
 topics = Topic.all
 
 
-5.times do
-    SponsoredPost.create!(
-    title: RandomData.random_sentence,
-    body: RandomData.random_paragraph,
-    price: 10)
-end
-sponsored_posts = SponsoredPost.all
 
 
 50.times do
@@ -46,35 +60,12 @@ end
 
 100.times do
     Comment.create!(
+        user: users.sample,
         post: posts.sample,
         body: RandomData.random_paragraph
         )
 end
 
-Comment.create!(
-    post: Post.find_by(title: "Boomshackalacka"),
-    body: "Boom!  I did it!"
-    )
-    
- admin = User.create!(
-   name:     'Admin User',
-   email:    'admin@example.com',
-   password: 'helloworld',
-   role:     'admin'
- )
-
- member = User.create!(
-   name:     'Member User',
-   email:    'member@example.com',
-   password: 'helloworld'
- )
-
- moderator = User.create!(
-   name:     'Moderator User',
-   email:    'moderator@example.com',
-   password: 'helloworld', 
-   role:      'moderator'    
- )
 
 
 puts "Seed finished"
