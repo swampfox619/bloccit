@@ -22,15 +22,6 @@
          </div>
        </div>
      <% end %>
-     <% @topic.sponsored_posts.each do |post| %>
-       <div class="media">
-         <div class="media-body">
-           <h4 class="media-heading">
-             <%= link_to post.title, topic_post_path(@topic, post) %>
-           </h4>
-         </div>
-       </div>
-     <% end %>
    </div>
    <div class="col-md-4">
    <% if current_user.admin? || current_user.member? %>
